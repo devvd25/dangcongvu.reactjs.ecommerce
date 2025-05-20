@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background: #fff;
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+
+/* Custom container styles */
+@layer utilities {
+  .container {
+    width: 100%;
+  }
+  @media (min-width: 576px) {
+    .container {
+      width: 540px; /* For small screens */
+    }
+  }
+  @media (min-width: 768px) {
+    .container {
+      width: 720px; /* For medium screens */
+    }
+  }
+  @media (min-width: 992px) {
+    .container {
+      width: 960px; /* For large screens */
+    }
+  }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px; /* For extra large screens */
+    }
+  }
+  @media (min-width: 1400px) {
+    .container {
+      width: 1320px; /* For double extra large screens */
+    }
+  }
+  .container-fluid {
+    width: 100%;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  .grid-important {
+    display: grid !important;
+  }
+}
