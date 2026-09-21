@@ -32,7 +32,11 @@ RUN npm ci --omit=dev
 
 COPY db.json ./
 
+# Copy static assets đã build từ Stage 1
 COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy toàn bộ thư mục src/assets để phục vụ các ảnh được dẫn trực tiếp từ db.json và component
+COPY src/assets /usr/share/nginx/html/src/assets
 
 COPY nginx.conf /etc/nginx/nginx.conf.template
 
