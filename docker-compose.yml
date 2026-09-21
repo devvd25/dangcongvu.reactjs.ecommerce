@@ -1,0 +1,11 @@
+services:
+  ecommerce:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ecommerce-app
+    ports:
+      - "3000:10000"
+    environment:
+      - PORT=10000
+    restart: unless-stopped
