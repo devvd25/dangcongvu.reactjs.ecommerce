@@ -138,7 +138,7 @@ const Header = () => {
                         <div className="relative w-full" ref={categoryDropdownRef}>
                             <button className="flex items-center gap-2 hover:bg-[#2871d5] rounded-[32px] py-3 px-4 whitespace-nowrap" onClick={handleCategoryClick}>
                                 <FontAwesomeIcon icon={faBars} />
-                                <span>Danh Mục</span>
+                                <span>Danh Mục Phone</span>
                             </button>
                             {isCategoryDropdownOpen && (
                                 <div className="absolute top-full left-0 right-0 bg-white text-black shadow-lg rounded-lg z-50 w-full">
