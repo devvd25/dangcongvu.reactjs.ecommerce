@@ -1,0 +1,2444 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "phone": "0123456789",
+      "role": "admin"
+    },
+    {
+      "id": "def0",
+      "email": "user@gmail.com",
+      "password": "123456",
+      "username": "DangCongVu",
+      "phone": "0985702931",
+      "role": "user"
+    },
+    {
+      "id": "3b4a",
+      "email": "test@gmail.com",
+      "password": "123456",
+      "username": "Nguyen Van A",
+      "phone": "034567892",
+      "role": "user"
+    },
+    {
+      "id": "259e",
+      "email": "devvd25@gmail.com",
+      "password": "123456",
+      "username": "devvd25",
+      "phone": "0985702931",
+      "role": "user"
+    },
+    {
+      "id": "209b",
+      "email": "belavu9999@gmail.com",
+      "password": "123456",
+      "username": "admin1@gmail.com",
+      "phone": "+84985702931",
+      "role": "user"
+    }
+  ],
+  "carts": [
+    {
+      "id": "58cb",
+      "userId": "def0",
+      "items": []
+    },
+    {
+      "id": "de12",
+      "userId": null,
+      "items": [
+        {
+          "productId": "a611",
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "6c02",
+      "userId": "3b4a",
+      "items": [
+        {
+          "productId": "e08d",
+          "quantity": 1
+        },
+        {
+          "productId": "729a",
+          "quantity": 1
+        },
+        {
+          "productId": "b1f0",
+          "quantity": 1
+        },
+        {
+          "productId": "788e",
+          "quantity": 2
+        }
+      ]
+    },
+    {
+      "id": "8e66",
+      "userId": null,
+      "items": []
+    },
+    {
+      "id": "ec4d",
+      "userId": "259e",
+      "items": []
+    },
+    {
+      "id": "0f29",
+      "userId": "209b",
+      "items": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "slug": "laptop",
+      "image": "src/assets/Categories/laptop-category.png",
+      "status": true
+    },
+    {
+      "id": "2",
+      "name": "iPhone",
+      "slug": "iphone",
+      "image": "src/assets/Categories/iphone-category.png",
+      "status": true
+    },
+    {
+      "id": "3",
+      "name": "Apple Watch",
+      "slug": "apple-watch",
+      "image": "src/assets/Categories/apple-watch-category.png",
+      "status": true
+    },
+    {
+      "id": "4",
+      "name": "Camera",
+      "slug": "camera",
+      "image": "src/assets/Categories/camera-category.png",
+      "status": true
+    },
+    {
+      "id": "5",
+      "name": "Máy tính bảng",
+      "slug": "may-tinh-bang",
+      "image": "src/assets/Categories/tablet-category.png",
+      "status": true
+    },
+    {
+      "id": "6",
+      "name": "Màn hình PC",
+      "slug": "man-hinh-pc",
+      "image": "src/assets/Categories/monitor-category.png",
+      "status": true
+    }
+  ],
+  "products": [
+    {
+      "id": "006c",
+      "categoryId": "3",
+      "name": "Đồng hồ thông minh Apple Watch SE 2 GPS 40mm viền nhôm dây thể thao ",
+      "model": "Apple",
+      "costPrice": "4800000",
+      "salePrice": "5500000",
+      "discountPrice": "5310000",
+      "description": "Apple Watch SE 2 GPS 40mm viền nhôm dây thể thao là chiếc smartwatch có sự hội tụ hoàn hảo giữa hiệu năng và thiết kế.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:324 x 394 pixels",
+        "chip": "Apple S4",
+        "storage": "32GB",
+        "battery": "Sử dụng trong 18 giờ",
+        "connectivity": "Bluetooth v5.3, GPS, Wifi"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "40",
+      "rating": 4.5
+    },
+    {
+      "id": "e08d",
+      "categoryId": "3",
+      "name": "Apple Watch Series 10 42mm viền nhôm dây thể thao",
+      "model": "Apple",
+      "costPrice": "9000000",
+      "salePrice": "11500000",
+      "discountPrice": "10990000",
+      "description": "Được ra mắt vào tháng 9/2024, Apple Watch Series 10 42mm, một biểu tượng công nghệ tiên tiến sánh đôi hoàn hảo với iPhone 16.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:374 x 446 pixels",
+        "chip": "Apple S7",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 18,
+      "rating": 4.5
+    },
+    {
+      "id": "729a",
+      "categoryId": "3",
+      "name": "Đồng hồ thông minh Apple Watch SE 2 GPS + Cellular 40mm viền nhôm dây thể thao ",
+      "model": "Apple",
+      "costPrice": "6000000",
+      "salePrice": "8000000",
+      "discountPrice": "7090000",
+      "description": "Apple Watch SE 2 GPS + Cellular 40mm viền nhôm dây thể thao có kiểu dáng tối giản, sang trọng, thiết lập các chức năng hỗ trợ theo dõi sức khỏe, tập luyện thể thao.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:324 x 394 pixels",
+        "chip": "Apple S5",
+        "storage": "32GB",
+        "battery": "Sử dụng trong 18 giờ",
+        "connectivity": "Bluetooth v5.3, GPS, Wifi"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "50",
+      "rating": 4.5
+    },
+    {
+      "id": "e6c0",
+      "categoryId": "3",
+      "name": "Đồng hồ thông minh Apple Watch SE 2 GPS 44mm viền nhôm dây thể thao ",
+      "model": "Apple",
+      "costPrice": "5000000",
+      "salePrice": "7000000",
+      "discountPrice": "6590000",
+      "description": "Apple Watch SE 2 GPS 44mm viền nhôm dây thể thao có vẻ ngoài đến hiệu năng đều thỏa mãn hầu hết mong đợi từ người dùng.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:448 x 368 pixels",
+        "chip": "Apple S6",
+        "storage": "32GB",
+        "battery": "Sử dụng trong 18 giờ",
+        "connectivity": "Bluetooth v5.3, GPS, Wifi"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "762f",
+      "categoryId": "3",
+      "name": "Apple Watch Series 10 46mm viền nhôm dây thể thao",
+      "model": "Apple",
+      "costPrice": "9000000",
+      "salePrice": "13000000",
+      "discountPrice": "11790000",
+      "description": "Apple Watch Series 10 46mm đem đến cho người dùng không chỉ thiết kế hiện đại mà còn sở hữu những công nghệ cao cấp.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:416x 496 pixels",
+        "chip": "Apple S10",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "40",
+      "rating": 4.5
+    },
+    {
+      "id": "71dc",
+      "categoryId": "3",
+      "name": "Apple Watch Series 10 46mm viền nhôm dây vải",
+      "model": "Apple",
+      "costPrice": "9000000",
+      "salePrice": "13500000",
+      "discountPrice": "11790000",
+      "description": "Phiên bản Apple Watch Series 10 46mm dây vải mới không chỉ là một nâng cấp về kích thước, khả năng mà còn là biểu tượng của sự kết hợp hoàn hảo giữa thiết kế thời thượng cho phong cách sống.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:416 x 496 pixels",
+        "chip": "Apple S10 SiP",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "24",
+      "rating": 4.5
+    },
+    {
+      "id": "ae4c",
+      "categoryId": "3",
+      "name": "Apple Watch Series 10 42mm viền nhôm dây vải ",
+      "model": "Apple",
+      "costPrice": "85000000",
+      "salePrice": "12000000",
+      "discountPrice": "10990000",
+      "description": "Apple Watch Series 10 vẫn sở hữu mặt đồng hồ hình chữ nhật, nét đặc trưng không thể nhầm lẫn của dòng Apple Watch nhưng lại có những cải tiến quan trọng.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:374 x 446 pixels",
+        "chip": "Apple S10 SiP",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "35",
+      "rating": 4.5
+    },
+    {
+      "id": "a611",
+      "categoryId": "3",
+      "name": "Đồng hồ thông minh Apple Watch Series 9 GPS 45mm viền nhôm dây thể thao ",
+      "model": "Apple",
+      "costPrice": "8000000",
+      "salePrice": "12500000",
+      "discountPrice": "9590000",
+      "description": "Vẫn mang vẻ ngoài tinh tế với màn hình tràn viền và các góc được bo tròn mềm mại, Apple Watch Series 9 được hoàn thiện từ khung viền hợp kim nhôm bền bỉ, với màn hình được phủ bởi tấm kính cường lực Ion-X chống nứt vỡ, bảo vệ đồng hồ tốt hơn trước những va chạm.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:484 x 396 pixels",
+        "chip": "Apple S9",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, GPS, Wifi4, GPS"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 52,
+      "rating": 4.5
+    },
+    {
+      "id": "9c59",
+      "categoryId": "3",
+      "name": "Đồng hồ thông minh Apple Watch SE 2 GPS 40mm viền nhôm dây vải",
+      "model": "Apple",
+      "costPrice": "4000000",
+      "salePrice": "6500000",
+      "discountPrice": "5790000",
+      "description": "Thiết kế tối giản mà đậm chất xu hướng, mẫu đồng hồ thông minh này dễ dàng tạo thiện cảm cho mọi người từ ngay cái nhìn đầu tiên. Khung viền chất liệu hợp kim nhôm cứng cáp đi cùng mặt kính cường lực Ion-X bóng sáng, hạn chế vết trầy xước.",
+      "specification": {
+        "screen": "OLED, Độ phân giải:324 x 394 pixels",
+        "chip": "Apple S8",
+        "storage": "32GB",
+        "battery": "Sử dụng trong 18 giờ",
+        "connectivity": "Bluetooth v5.3, GPS, Wifi"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "categoryId": "3",
+      "name": "Apple Watch Series 10 GPS + Cellular 42mm viền nhôm dây thể thao",
+      "model": "Apple",
+      "costPrice": "11000000",
+      "salePrice": "14900000",
+      "discountPrice": "13590000",
+      "description": "Dễ dàng nhận thấy có đôi chút thay đổi nhỏ trong mặt thiết kế của thiết bị, Apple Watch Series 10 mỏng hơn gần 10% so với Series 7, 8 và 9, cũng như diện tích màn hình cũng được mở rộng hơn các thế hệ trước đây. ",
+      "specification": {
+        "screen": "OLED, Độ phân giải:374 x 446 pixels",
+        "chip": "Apple S10 SiP",
+        "storage": "64GB",
+        "battery": "Sử dụng trong 36 giờ. Sạc nam châm",
+        "connectivity": "Bluetooth v5.3, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/apple-watch/applewatch10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Đồng hồ thông minh",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "70",
+      "rating": 4.5,
+      "id": "8ec9"
+    },
+    {
+      "id": "0804",
+      "categoryId": "1",
+      "name": "Laptop Asus Vivobook Go 15 E1504FA R5 7520U/16GB/512GB/Chuột/Win11 (NJ776W) Laptop Asus Vivobook Go 15 E1504FA R5 7520U/16GB/512GB/Chuột/Win11 (NJ776W) ",
+      "model": "ASUS",
+      "costPrice": "9000000",
+      "salePrice": "14500000",
+      "discountPrice": "12390000",
+      "description": "Laptop Asus Vivobook Go 15 E1504FA R5 7520U (NJ776W) được trang bị vi xử lý AMD Ryzen 7000 Series mới, giúp người dùng hoàn thành tác vụ một cách nhanh chóng và hiệu quả.",
+      "specification": {
+        "cpu": "AMD Ryzen 5 - 7520U",
+        "ram": "16GB",
+        "storage": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - AMD Radeon Graphics",
+        "ports": "USB Type-C, 1x USB 2.0, Jack tai nghe 3.5 mm ,1x USB 3.2 HDMI",
+        "weight": "1.63 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 43,
+      "rating": 4.5
+    },
+    {
+      "id": "9fb5",
+      "categoryId": "1",
+      "name": "Laptop HP 15 fc0085AU R5 7430U/16GB/512GB/Win11 (A6VV8PA)",
+      "model": "HP",
+      "costPrice": "10000000",
+      "salePrice": "14900000",
+      "discountPrice": "12890000",
+      "description": "Laptop HP 15 fc0085AU R5 7430U (A6VV8PA) sở hữu bộ vi xử lý AMD Ryzen 5 mạnh mẽ, đáp ứng mọi nhu cầu công việc và giải trí của bạn.",
+      "specification": {
+        "cpu": "AMD Ryzen 5 - 7430U",
+        "ram": "16GB",
+        "storage": " 512 GB SSD NVMe PCIe",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - AMD Radeon Graphics",
+        "ports": "HDMI 2x USB Type-A 1 x USB Type-C (chỉ hỗ trợ truyền dữ liệu) 1 x Headphone/microphone combo",
+        "weight": "1.59 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "90",
+      "rating": 4.5
+    },
+    {
+      "id": "48ab",
+      "categoryId": "1",
+      "name": "Laptop Dell Inspiron 15 3520 i5 1235U/16GB/512GB/120Hz/OfficeHS/Win11 (N5I5052W1) ",
+      "model": "Dell",
+      "costPrice": "13000000",
+      "salePrice": "17900000",
+      "discountPrice": "16490000",
+      "description": "Laptop Dell Inspiron 15 3520 i5 1235U (N5I5052W1) là một lựa chọn nổi bật và xuất sắc trong phân khúc laptop học tập - văn phòng tầm trung.",
+      "specification": {
+        "cpu": "Intel Core i5 Alder Lake - 1235U",
+        "ram": "16GB",
+        "storage": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 2 TB (2280) / 1 TB (2230)) Hỗ trợ khe cắm HDD SATA 2.5 inch mở rộng (nâng cấp tối đa 2 TB)",
+        "screen": "15.6\". Full HD, 120Hz",
+        "graphics": "Card tích hợp - Intel Iris Xe Graphics",
+        "ports": "Jack tai nghe 3.5 mm 1 x USB 2.0 2 x USB 3.2 HDMI",
+        "weight": "1.66 kg",
+        "os": "Windows 11 Home SL + Office Home & Student 2021 vĩnh viễn"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "42",
+      "rating": 4.5
+    },
+    {
+      "id": "8eb3",
+      "categoryId": "1",
+      "name": "Laptop Asus Vivobook 15 X1504ZA i3 1215U/8GB/512GB/Win11 (NJ102W) ",
+      "model": "ASUS",
+      "costPrice": "7000000",
+      "salePrice": "12000000",
+      "discountPrice": "9990000",
+      "description": "Laptop Asus Vivobook 15 X1504ZA i3 1215U (NJ102W) là mẫu laptop học tập - văn phòng mang hiệu năng ổn định để xử lý tốt các công việc cùng giải trí hàng ngày",
+      "specification": {
+        "cpu": "Intel Core i3 Alder Lake - 1215U",
+        "ram": "8Gb",
+        "storage": "512GB SSD NVMe PCle",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - Intel UHD Graphics",
+        "ports": "USB Type-C, 1x USB 2.0, Jack tai nghe 3.5 mm ,1x USB 3.2 HDMI",
+        "weight": "1.7 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "25",
+      "rating": 4.5
+    },
+    {
+      "id": "1e9d",
+      "categoryId": "1",
+      "name": "Laptop Asus Vivobook 15 OLED A1505ZA i5 12500H/16GB/512GB/120Hz/Win11 (MA415W) ",
+      "model": "ASUS",
+      "costPrice": "13000000",
+      "salePrice": "18000000",
+      "discountPrice": "16490000",
+      "description": "Laptop Asus Vivobook 15 OLED A1505ZA (MA415W) sẽ đáp ứng tốt nhu cầu tìm mua laptop học tập - văn phòng của các bạn học sinh, sinh viên hay kể cả người đi làm.",
+      "specification": {
+        "cpu": "Intel Core i5 Alder Lake - 12500H",
+        "ram": "16GB",
+        "storage": "512GB SSD NVMe PCle",
+        "screen": "15.6\". Full HD, 120Hz",
+        "graphics": "Card tích hợp - Intel Iris Xe Graphics",
+        "ports": "USB Type-C, 1x USB 2.0, Jack tai nghe 3.5 mm ,1x USB 3.2 HDMI",
+        "weight": "1.7 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "10",
+      "rating": 4.5
+    },
+    {
+      "id": "93ce",
+      "categoryId": "1",
+      "name": "Laptop HP 15 fd0303TU i3 1315U/8GB/512GB/Win11 (A2NL4PA) ",
+      "model": "HP",
+      "costPrice": "8000000",
+      "salePrice": "13500000",
+      "discountPrice": "11289997",
+      "description": "Laptop HP 15 fd0303TU i3 1315U (A2NL4PA) không chỉ đáp ứng nhu cầu học tập, văn phòng và thiết kế đồ họa cơ bản, mà còn là người bạn đồng hành lý tưởng cho mọi hành trình của bạn.",
+      "specification": {
+        "cpu": "Intel Core i3 Raptor Lake - 1315U",
+        "ram": "8GB",
+        "storage": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB)",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - Intel UHD Graphics",
+        "ports": "HDMI 2 x USB Type-A 1 x USB Type-C (chỉ hỗ trợ truyền dữ liệu) 1 x Headphone/microphone combo",
+        "weight": "1.59 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "35",
+      "rating": 4.5
+    },
+    {
+      "id": "381a",
+      "categoryId": "1",
+      "name": "Laptop Dell Inspiron 15 3520 i5 1235U/16GB/512GB/120Hz/OfficeHS/KYHD/Win11 ",
+      "model": "Dell",
+      "costPrice": "14000000",
+      "salePrice": "18900000",
+      "discountPrice": "16490000",
+      "description": "Bước vào hành trình học tập và công việc với chiếc laptop Dell Inspiron 15 3520 i5 1235U (25P231) thiết bị nổi bật trong phân khúc máy tính học tập và văn phòng",
+      "specification": {
+        "cpu": "Intel Core i5 Alder Lake - 1235U",
+        "ram": "16GB",
+        "storage": "512 GB SSD NVMe PCIe Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
+        "screen": "15.6\". Full HD, 120Hz",
+        "graphics": "Card tích hợp - Intel Iris Xe Graphics",
+        "ports": "Jack tai nghe 3.5 mm 1 x USB 2.0 2 x USB 3.2 HDMI",
+        "weight": "1.9 kg",
+        "os": "Windows 11 Home SL + Office Home & Student 2021 vĩnh viễn"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "id": "6c67",
+      "categoryId": "1",
+      "name": "Laptop Lenovo Ideapad Slim 3 15IAH8 i5 12450H/16GB/512GB/Win11 (83ER000EVN) ",
+      "model": "Lennovo",
+      "costPrice": "11000000",
+      "salePrice": "15900000",
+      "discountPrice": "13890000",
+      "description": "Laptop Lenovo Ideapad Slim 3 15IAH8 i5 12450H (83ER000EVN) được trang bị bộ vi xử lý Intel gen 12 dòng H mạnh mẽ cùng nhiều công nghệ màn hình chất lượng, chiếc máy sẽ đem đến sự ổn định và linh hoạt trong việc xử lý đa nhiệm, từ công việc văn phòng đến giải trí đa phương tiện.",
+      "specification": {
+        "cpu": "Intel Core i5 Alder Lake - 12450H",
+        "ram": "16GB",
+        "storage": "512 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 2 TB (2280) / 1 TB (2230)) Hỗ trợ khe cắm HDD SATA 2.5 inch mở rộng (nâng cấp tối đa 2 TB)",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - Intel UHD Graphics",
+        "ports": "Jack tai nghe 3.5 mm 2 x USB 3.2 HDMI 1x USB-C 3.2 (hỗ trợ truyền dữ liệu, Power Delivery và DisplayPort 1.2)",
+        "weight": "1.62 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "65",
+      "rating": 4.5
+    },
+    {
+      "id": "dfab",
+      "categoryId": "1",
+      "name": "Laptop Acer Aspire 3 A315 58 529V i5 1135G7/8GB/256GB/Win11 (NX.ADDSV.00N) ",
+      "model": "Acer",
+      "costPrice": "6500000",
+      "salePrice": "10990000",
+      "discountPrice": "8990000",
+      "description": "Với thiết kế thanh lịch và tinh tế, chiếc laptop này không chỉ thu hút mọi ánh nhìn mà còn hứa hẹn mang đến những trải nghiệm làm việc và giải trí phù hợp với nhiều người dùng hiện nay.",
+      "specification": {
+        "cpu": "Intel Core i5 Tiger Lake - 1135G7",
+        "ram": "8GB",
+        "storage": " 256 GB SSD NVMe PCIe (Có thể tháo ra, lắp thanh khác tối đa 1 TB) Hỗ trợ khe cắm HDD SATA (nâng cấp tối đa 2 TB)",
+        "screen": "15.6\". Full HD, 60Hz",
+        "graphics": "Card tích hợp - Intel Iris Xe Graphics",
+        "ports": "LAN (RJ45) 1 x USB 2.0 Jack tai nghe 3.5 mm 2 x USB 3.2 HDMI",
+        "weight": "1.7 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "28",
+      "rating": 4.5
+    },
+    {
+      "id": "aa1a",
+      "categoryId": "1",
+      "name": "Laptop Asus Gaming Vivobook K3605ZF i5 12500H/16GB/512GB/4GB RTX2050/Win11 (RP745W) ",
+      "model": "ASUS",
+      "costPrice": "15000000",
+      "salePrice": "19900000",
+      "discountPrice": "17390000",
+      "description": "Với cấu hình mạnh mẽ, thiết kế tinh tế và màn hình 16 inch tuyệt đẹp, sản phẩm này hứa hẹn mang đến cho người dùng những trải nghiệm mượt mà và đầy hứng khởi.",
+      "specification": {
+        "cpu": "Intel Core i5 Alder Lake - 12500H",
+        "ram": "16GB",
+        "storage": "512GB SSD NVMe PCle",
+        "screen": "16\", WUXGA, 144Hz",
+        "graphics": "Card rời - NVIDIA GeForce RTX 2050, 4 GB",
+        "ports": "Jack tai nghe 3.5 mm 2 x USB 3.2 HDMI 1 x USB Type C (chỉ hỗ trợ Power Delivery)",
+        "weight": "1.8 kg",
+        "os": "Windows 11 Home SL"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/laptops/laptop10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Laptop",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "22",
+      "rating": 4.5
+    },
+    {
+      "id": "16bd",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Pro Max 256GB ",
+      "model": "Apple",
+      "costPrice": "30000000",
+      "salePrice": "36000000",
+      "discountPrice": "34490000",
+      "description": " iPhone 16 một lần nữa khẳng định vị thế của Apple là một biểu tượng đổi mới và tiên phong trong ngành công nghệ.",
+      "specification": {
+        "chip": "Apple A18 Pro 6 nhân",
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "Chính 48 MP & Phụ 48 MP, 12 MP",
+        "battery": "33 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 36,
+      "rating": 4.5
+    },
+    {
+      "id": "ce70",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Pro Max 512GB",
+      "model": "Apple",
+      "costPrice": "37000000",
+      "salePrice": "43000000",
+      "discountPrice": "40890000",
+      "description": "Với những cải tiến vượt bậc về thiết kế, hiệu suất và tính năng, sản phẩm này định hình lại tiêu chuẩn của một thiết bị thông minh đẳng cấp.",
+      "specification": {
+        "chip": "Apple A18 Pro 6 nhân",
+        "ram": "8GB",
+        "storage": "512GB",
+        "camera": "Apple A18 Pro 6 nhân",
+        "battery": "33 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "40",
+      "rating": 4.5
+    },
+    {
+      "id": "dbde",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Pro Max 1TB ",
+      "model": "Apple",
+      "costPrice": "43000000",
+      "salePrice": "49900000",
+      "discountPrice": "46790000",
+      "description": "Đây không chỉ là một thiết bị điện tử, mà còn là sự kết hợp hoàn hảo giữa công nghệ và phong cách, mang lại trải nghiệm đẳng cấp cho người dùng trên toàn thế giới",
+      "specification": {
+        "chip": "Apple A18 Pro 6 nhân",
+        "ram": "8GB",
+        "storage": "1TB",
+        "camera": "Chính 48 MP & Phụ 48 MP, 12 MP",
+        "battery": "33 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "33",
+      "rating": 4.5
+    },
+    {
+      "id": "b1f0",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Pro 256GB ",
+      "model": "Apple",
+      "costPrice": "29000000",
+      "salePrice": "33000000",
+      "discountPrice": "31990000",
+      "description": "Với sự kết hợp hoàn hảo giữa thiết kế hiện đại, công nghệ tiên tiến và hiệu suất vượt trội, iPhone 16 Pro đã nhanh chóng trở thành một trong những sản phẩm công nghệ nổi bật nhất của năm.",
+      "specification": {
+        "chip": "Apple A18 Pro 6 nhân",
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "Chính 48 MP & Phụ 48 MP, 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "22",
+      "rating": 4.5
+    },
+    {
+      "id": "3240",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Pro 512GB",
+      "model": "Apple",
+      "costPrice": "35000000",
+      "salePrice": "39990000",
+      "discountPrice": "37990000",
+      "description": "Được xem là biểu tượng của sự hoàn hảo, chiếc điện thoại này không chỉ đơn thuần là một thiết bị công nghệ mà còn là trợ thủ đắc lực cho người dùng trong công việc, giải trí, và sáng tạo.",
+      "specification": {
+        "chip": "Apple A18 Pro 6 nhân",
+        "ram": "8GB",
+        "storage": "512GB",
+        "camera": "Chính 48 MP & Phụ 48 MP, 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "25",
+      "rating": 4.5
+    },
+    {
+      "id": "bd1d",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Plus 128GB",
+      "model": "Apple",
+      "costPrice": "23000000",
+      "salePrice": "27000000",
+      "discountPrice": "25690000",
+      "description": "iPhone 16 Plus tiếp tục giữ thiết kế vuông vắn đặc trưng nhưng đã được tinh chỉnh với các chi tiết hoàn thiện hơn.",
+      "specification": {
+        "chip": "Apple A18 6 nhân",
+        "ram": "8GB",
+        "storage": "128GB",
+        "camera": "Chính 48 MP & Phụ 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "40",
+      "rating": 4.5
+    },
+    {
+      "id": "2177",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Plus 256GB ",
+      "model": "Apple",
+      "costPrice": "26000000",
+      "salePrice": "29990000",
+      "discountPrice": "28390000",
+      "description": "Sức mạnh của iPhone 16 Plus nằm ở bộ vi xử lý A18, được chế tạo trên tiến trình 3 nm mới nhất, giúp tăng 17% hiệu suất và cải thiện đáng kể khả năng tiết kiệm năng lượng.",
+      "specification": {
+        "chip": "Apple A18 6 nhân",
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "Chính 48 MP & Phụ 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "10",
+      "rating": 4.5
+    },
+    {
+      "id": "bd66",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 Plus 512GB ",
+      "model": "Apple",
+      "costPrice": "30000000",
+      "salePrice": "34990000",
+      "discountPrice": "33090000",
+      "description": "iPhone 16 Plus 512GB tiếp tục duy trì thiết kế vuông vắn đặc trưng của dòng sản phẩm, nhưng với những cải tiến tinh tế.",
+      "specification": {
+        "chip": "Apple A18 6 nhân",
+        "ram": "8GB",
+        "storage": "512GB",
+        "camera": "Chính 48 MP & Phụ 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "id": "5271",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 128GB ",
+      "model": "Apple",
+      "costPrice": "20000000",
+      "salePrice": "22990000",
+      "discountPrice": "22290000",
+      "description": " Kết hợp cùng khung viền là mặt lưng kính pha màu tinh tế không chỉ làm nổi bật vẻ ngoài sang trọng mà còn tăng thêm độ bền cho máy.",
+      "specification": {
+        "chip": "Apple A18 6 nhân",
+        "ram": "8GB",
+        "storage": "128GB",
+        "camera": "Chính 48 MP & Phụ 12 MP",
+        "battery": "27 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "11",
+      "rating": 4.5
+    },
+    {
+      "id": "943f",
+      "categoryId": "2",
+      "name": "Điện thoại iPhone 16 512GB ",
+      "model": "Apple",
+      "costPrice": "27000000",
+      "salePrice": "31990000",
+      "discountPrice": "29890000",
+      "description": "Một trong những điểm nhấn nổi bật nhất của chiếc smartphone này chính là việc trang bị con chip A18, được sản xuất trên tiến trình 3nm tiên tiến.",
+      "specification": {
+        "chip": "Apple A18 6 nhân",
+        "ram": "8GB",
+        "storage": "512GB",
+        "camera": "Chính 48 MP & Phụ 12 MP",
+        "battery": "22 giờ, sạc 20W",
+        "connectivity": "5G, Type-C, NFC"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/phones/phone10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Điện thoại",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "9fe3",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP IMOU TA32CP-L ",
+      "model": "Imou",
+      "costPrice": "300000",
+      "salePrice": "650000",
+      "discountPrice": "470000",
+      "description": "Được thiết kế mềm mại với màu trắng trang nhã và kích thước nhỏ gọn, camera IMOU TA32CP-L nằm gọn trong không gian đặt và có thể hoà vào bất kỳ kiểu trang trí nội thất nào. Cho dù đó là phòng khách hay không gian làm việc của bạn.",
+      "specification": {
+        "sensor": "Tầm nhìn xa hồng ngoại",
+        "processor": "Imou",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 3 MP (2304 x 1296)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 49,
+      "rating": 4.5
+    },
+    {
+      "id": "95c4",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 2MP TIANDY TC-H322N ",
+      "model": "TIANDY ",
+      "costPrice": "250000",
+      "salePrice": "450000",
+      "discountPrice": "390000",
+      "description": "Camera sở hữu kiểu dáng đẹp mắt, tinh tế và sang trọng. Gam màu trắng thanh lịch kết hợp với các đường bo cong mềm mại tạo nên một thiết kế hiện đại và thẩm mỹ.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "TIANDY",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080)",
+        "video": "Lưu trữ: MicroSD ≤ 512GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "96ea",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 2MP TP-Link Tapo C200C ",
+      "model": "TP-Link",
+      "costPrice": "250000",
+      "salePrice": "490000",
+      "discountPrice": "380000",
+      "description": "Sở hữu gam màu trắng tinh tế, camera hòa mình hoàn hảo vào mọi không gian lắp đặt, mang đến vẻ đẹp hiện đại và sang trọng. Thiết kế nhỏ gọn, thanh lịch giúp camera dễ dàng bố trí mà không gây ảnh hưởng đến thẩm mỹ, phù hợp với mọi phong cách nội thất.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "TP-Link",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080p)",
+        "video": "Lưu trữ: MicroSD ≤ 512GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "10",
+      "rating": 4.5
+    },
+    {
+      "id": "788e",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 2MP Ezviz C6N",
+      "model": "Ezviz",
+      "costPrice": "280000",
+      "salePrice": "550000",
+      "discountPrice": "360000",
+      "description": "Camera IP 360 Độ 2MP Ezviz C6N có thiết kế hình dạng tròn tinh tế, hiện đại, sang trọng với tông màu trắng nổi bật và kích thước nhỏ gọn.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "Ezviz",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080p)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "id": "54f8",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP EZVIZ TY1",
+      "model": "Ezviz",
+      "costPrice": "300000",
+      "salePrice": "650000",
+      "discountPrice": "500000",
+      "description": "Camera IP 360 Độ 3MP EZVIZ TY1 với khả năng quay quét toàn diện và các tính năng hiện đại như theo dõi thông minh, tầm nhìn ban đêm rõ nét,... sẽ giúp bạn luôn an tâm về sự an toàn của không gian sống và làm việc của mình.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "Ezviz",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080p)",
+        "video": "Lưu trữ: MicroSD ≤ 512GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "16",
+      "rating": 4.5
+    },
+    {
+      "id": "1790",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP IMOU RANGER RC GK2CP-3C0WR",
+      "model": "Imou",
+      "costPrice": "400000",
+      "salePrice": "650000",
+      "discountPrice": "520000",
+      "description": "Camera có thiết kế nhỏ gọn và thanh lịch với khối lượng chỉ 171 g, dễ dàng lắp đặt ở bất kỳ vị trí nào trong nhà, từ phòng khách, phòng ngủ cho đến phòng bếp. ",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "Imou",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080p)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "21",
+      "rating": 4.5
+    },
+    {
+      "id": "1f04",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP 365 Selection C1 ",
+      "model": "Selection ",
+      "costPrice": "330000",
+      "salePrice": "520000",
+      "discountPrice": "410000",
+      "description": "Camera 365 Selection sở hữu độ phân giải 3 MP, mang lại hình ảnh sắc nét và sống động. Từ những chi tiết nhỏ nhất như biểu cảm khuôn mặt hay chuyển động của vật thể đều được ghi lại một cách sắc nét.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "Selection ",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 3MP (1296p)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "35",
+      "rating": 4.5
+    },
+    {
+      "id": "b730",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP TP-Link Tapo C210 ",
+      "model": "TP-Link",
+      "costPrice": "320000",
+      "salePrice": "690000",
+      "discountPrice": "425000",
+      "description": "Kiểu dáng camera gọn chắc, chân đế phẳng dễ dàng cho việc lắp đặt ở nhiều vị trí từ để bàn, kệ đến gắn tường, trần.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "TP-Link",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 3 MP (1296p)",
+        "video": "Lưu trữ: MicroSD ≤ 512GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "27",
+      "rating": 4.5
+    },
+    {
+      "id": "64eb",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 3MP BOTSLAB C212 ",
+      "model": "c",
+      "costPrice": "300000",
+      "salePrice": "490000",
+      "discountPrice": "430000",
+      "description": "Camera IP 360 Độ 3MP BOTSLAB C212 sở hữu kiểu dáng gọn gàng với gam màu trang nhã cùng hàng loạt các công nghệ/tiện ích bổ trợ đi kèm giúp tối ưu khả năng quan sát và theo dõi của camera.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "BOTSLAB ",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 3MP (1296p)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "20",
+      "rating": 4.5
+    },
+    {
+      "id": "a3a9",
+      "categoryId": "4",
+      "name": "Camera IP 360 Độ 2MP Xiaomi Mi Home C200 ",
+      "model": "Xiaomi",
+      "costPrice": "350000",
+      "salePrice": "550000",
+      "discountPrice": "450000",
+      "description": "Camera có diện mạo tối giản với ống kính được chế tác dạng hình cầu độc đáo gắn trên đế đỡ hình trụ tròn, kích thước nhỏ gọn giúp lắp đặt dễ dàng mà không chiếm quá nhiều diện tích.",
+      "specification": {
+        "sensor": "Phát hiện chuyển động. Báo động âm thanh bất thường",
+        "processor": "Xiaomi",
+        "autofocus": "Tự động lấy nét",
+        "screen": "Độ phân giải: 2 MP (1080p)",
+        "video": "Lưu trữ: MicroSD ≤ 256GB"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/cameras/camera10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Camera",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "568b",
+      "categoryId": "5",
+      "name": "Máy tính bảng iPad 9 WiFi 64GB ",
+      "model": "Apple",
+      "costPrice": "6500000",
+      "salePrice": "8390000",
+      "discountPrice": "7090000",
+      "description": "Sở hữu một thiết kế quen thuộc của dòng iPad 10.2 inch, vỏ máy làm từ aluminum có độ bền cao. Theo đó là 2 màu sắc cơ bản là xám và bạc để bạn có thể lựa chọn cho phù hợp với phong cách, cá tính của bạn.",
+      "specification": {
+        "chip": "Apple A13 Bionic",
+        "screen": "Retina IPS LCD",
+        "ram": "3 GB",
+        "storage": "64GB",
+        "camera": "Trước: 12MP, Sau: 8MP",
+        "battery": "32.4 Wh (~ 8600 mAh). Sạc 20W"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "10",
+      "rating": 4.5
+    },
+    {
+      "id": "9d6a",
+      "categoryId": "5",
+      "name": "Máy tính bảng iPad Pro M4 11 inch WiFi 256GB ",
+      "model": "Apple",
+      "costPrice": "25000000",
+      "salePrice": "28990000",
+      "discountPrice": "27490000",
+      "description": "iPad Pro M4 256GB được trang bị chip Apple M4 với 9 nhân CPU, mang lại sức mạnh đáng kinh ngạc cho mọi tác vụ.",
+      "specification": {
+        "chip": "Apple M4 9 nhân",
+        "screen": "Ultra Retina XDR",
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "Trước: 12MP, Sau: 12MP",
+        "battery": "31.29 Wh. Sạc 20W"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "33",
+      "rating": 4.5
+    },
+    {
+      "id": "3d64",
+      "categoryId": "5",
+      "name": "Máy tính bảng OPPO Pad Neo WiFi 6GB/128GB Máy tính bảng OPPO Pad Neo WiFi 6GB/128GB ",
+      "model": "OPPO",
+      "costPrice": "5000000",
+      "salePrice": "7500000",
+      "discountPrice": "6690000",
+      "description": "OPPO Pad Neo WiFi sở hữu thiết kế hoàn toàn mới với các sản phẩm cùng dòng, máy tính bảng có mặt sau là sự kết hợp của kính và nhôm cao cấp, đem đến dấu ấn lịch lãm và phong cách",
+      "specification": {
+        "chip": "MediaTek Helio G99",
+        "screen": "IPS LCD",
+        "ram": "6GB",
+        "storage": "128GB",
+        "camera": "Trước: 8MP, Sau: 8MP",
+        "battery": "8000 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "11",
+      "rating": 4.5
+    },
+    {
+      "id": "40aa",
+      "categoryId": "5",
+      "name": "Máy tính bảng Samsung Galaxy Tab S10 Ultra 5G 12GB/256GB ",
+      "model": "SAMSUNG",
+      "costPrice": "30000000",
+      "salePrice": "34990000",
+      "discountPrice": "33990000",
+      "description": "Samsung Galaxy Tab S10 Ultra 5G sở hữu màn hình 14.6 inch cùng thiết kế trendy hợp xu hướng với khung viền nhôm sang trọng. Máy được trang bị chip MediaTek Dimensity 9300+ mạnh mẽ với RAM 12GB cùng bộ nhớ 256GB thỏa sức lưu trữ. Tablet hỗ trợ bút S-Pen cũng như có thể kết nối với bàn phím hỗ trợ tối ưu cho công việc",
+      "specification": {
+        "chip": "MediaTek Dimensity 9300+ 8 nhân",
+        "screen": "MediaTek Dimensity 9300+ 8 nhân",
+        "ram": "12GB",
+        "storage": "256GB",
+        "camera": "Trước: 2 12MP, Sau: 13MP & 8MP",
+        "battery": "11200 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "35",
+      "rating": 4.5
+    },
+    {
+      "id": "f11e",
+      "categoryId": "5",
+      "name": "Máy tính bảng Samsung Galaxy Tab S10 Ultra WiFi 12GB/256GB ",
+      "model": "SAMSUNG",
+      "costPrice": "28000000",
+      "salePrice": "32000000",
+      "discountPrice": "30990000",
+      "description": "Samsung Galaxy Tab S10 Ultra 5G sở hữu màn hình 14.6 inch cùng thiết kế trendy hợp xu hướng với khung viền nhôm sang trọng. Máy được trang bị chip MediaTek Dimensity 9300+ mạnh mẽ với RAM 12GB cùng bộ nhớ 256GB thỏa sức lưu trữ. Tablet hỗ trợ bút S-Pen cũng như có thể kết nối với bàn phím hỗ trợ tối ưu cho công việc",
+      "specification": {
+        "chip": "MediaTek Dimensity 9300+ 8 nhân",
+        "screen": "Dynamic AMOLED 2X",
+        "ram": "12GB",
+        "storage": "256GB",
+        "camera": "Trước: 2 12MP, Sau: 13MP & 8MP",
+        "battery": "11200 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "20",
+      "rating": 4.5
+    },
+    {
+      "id": "00c0",
+      "categoryId": "5",
+      "name": "Máy tính bảng Samsung Galaxy Tab S10+ 5G 12GB/256GB ",
+      "model": "SAMSUNG",
+      "costPrice": "26000000",
+      "salePrice": "30000000",
+      "discountPrice": "28990000",
+      "description": "Đây là sản phẩm dành cho những người muốn có một trải nghiệm trọn vẹn, từ hiệu năng cao đến các tính năng hỗ trợ sáng tạo.",
+      "specification": {
+        "chip": "MediaTek Dimensity 9300+ 8 nhân",
+        "screen": "Dynamic AMOLED 2X",
+        "ram": "12GB",
+        "storage": "256GB",
+        "camera": "Trước: 2 12MP, Sau: 13MP & 8MP",
+        "battery": "10090 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 14,
+      "rating": 4.5
+    },
+    {
+      "id": "cba0",
+      "categoryId": "5",
+      "name": "Máy tính bảng Lenovo Tab Plus WiFi 8GB/256GB Máy tính bảng Lenovo Tab Plus WiFi 8GB/256GB ",
+      "model": "Lennovo",
+      "costPrice": "5000000",
+      "salePrice": "7990000",
+      "discountPrice": "6790000",
+      "description": "Lenovo Tab Plus mang đến thiết kế thanh lịch, hiệu năng mạnh và trải nghiệm giải trí tuyệt vời.",
+      "specification": {
+        "chip": "MediaTek Helio G99",
+        "screen": "IPS LCD",
+        "ram": "8GB",
+        "storage": "256GB",
+        "camera": "Trước: 8MP, Sau: 8MP",
+        "battery": "8600 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "12",
+      "rating": 4.5
+    },
+    {
+      "id": "32a6",
+      "categoryId": "5",
+      "name": "Máy tính bảng TCL Tab 11 WiFi 4GB/128GB Máy tính bảng TCL Tab 11 WiFi 4GB/128GB ",
+      "model": "TCL",
+      "costPrice": "2500000",
+      "salePrice": "4500000",
+      "discountPrice": "3590000",
+      "description": "TCL Tab 11 Wifi tỏ ra thanh lịch và mang đậm nét nghệ thuật với thiết kế vuông vức, hài hòa với xu hướng hiện nay.",
+      "specification": {
+        "chip": "Helio P60T",
+        "screen": "IPS LCD",
+        "ram": "4GB",
+        "storage": "128GB",
+        "camera": "Trước: 8MP, Sau: 8MP",
+        "battery": "8000 mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "10",
+      "rating": 4.5
+    },
+    {
+      "id": "1c20",
+      "categoryId": "5",
+      "name": "Máy tính bảng TCL Tab 10 Gen 2 4G 4GB/64GB",
+      "model": "TCL",
+      "costPrice": "1500000",
+      "salePrice": "3900000",
+      "discountPrice": "2990000",
+      "description": "TCL Tab 10 Gen 2 LTE được thiết kế bằng kim loại nguyên khối thay vì sử dụng chất liệu nhựa như trên các dòng máy giá rẻ. Sự chọn lựa này không chỉ mang lại tính thẩm mỹ cao mà còn giúp tản nhiệt hiệu quả ở mặt lưng.",
+      "specification": {
+        "chip": "MediaTek MT8768",
+        "screen": "IPS LCD",
+        "ram": "4GB",
+        "storage": "64GB",
+        "camera": "Trước: 8MP, Sau: 5MP",
+        "battery": "6000mAh"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "a225",
+      "categoryId": "5",
+      "name": "Máy tính bảng Xiaomi Redmi Pad SE 8.7 WiFi 4GB/64GB",
+      "model": "Xiaomi",
+      "costPrice": "2000000",
+      "salePrice": "3990000",
+      "discountPrice": "2990000",
+      "description": "Redmi Pad SE 8.7 sở hữu màn hình IPS LCD 8.7 inch, mang đến không gian hiển thị đủ rộng cho cả công việc và giải trí.",
+      "specification": {
+        "chip": "MediaTek Helio G85 8 nhân",
+        "screen": "IPS LCD",
+        "ram": "4GB",
+        "storage": "64GB",
+        "camera": "Trước: 8MP, Sau: 5MP",
+        "battery": "6650 mhA"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/tablets/tablet10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Máy tính bảng",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5
+    },
+    {
+      "id": "5fea",
+      "categoryId": "6",
+      "name": "Màn hình Xiaomi A27i 27 inch FHD/IPS/100Hz/6ms/HDMI (ELA5345EU) ",
+      "model": "Xiaomi",
+      "costPrice": "1500000",
+      "salePrice": "2990000",
+      "discountPrice": "2290000",
+      "description": "Màn hình Xiaomi A27i 27 inch FHD là một tác phẩm mới trong làng công nghệ hiển thị, đem lại cho người dùng một trải nghiệm xuất sắc.",
+      "specification": {
+        "size": "27\"",
+        "panel": "Màn hình không cảm ứng",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "6ms (GTG)",
+        "ports": "DisplayPort 1 x HDMI 2.0"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor1.jpg",
+          "alt": "Hình 1"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "id": "8f09",
+      "categoryId": "6",
+      "name": "Màn hình MSI Pro MP225 21.45 inch FHD/IPS/100Hz/1ms/HDMI ",
+      "model": "MSI",
+      "costPrice": "1000000",
+      "salePrice": "1990000",
+      "discountPrice": "1690000",
+      "description": "Nhà sản xuất tích hợp nhiều công nghệ màn hình hiện đại, nhằm tạo nên một chiếc màn hình MSI Pro MP225 21.45 inch FHD hoàn hảo cho cả công việc và giải trí trong không gian của bạn.",
+      "specification": {
+        "size": "21.45\"",
+        "panel": "Công nghệ chống nháy - Flicker-free Giảm ánh sáng xanh Eyesergo Chống chói Anti-Glare Adaptive-Sync",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "1ms (MPRT)",
+        "ports": "1 x Headphone-out 1 x HDMI 1.4 1 x D-Sub (VGA)"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor2.jpg",
+          "alt": "Hình 2"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "35",
+      "rating": 4.5
+    },
+    {
+      "id": "6e9f",
+      "categoryId": "6",
+      "name": "Màn hình Samsung S3 S33GC LS24C330GAEXXV 24 inch FHD/IPS/100Hz/4ms/HDMI/FreeSync ",
+      "model": "SAMSUNG",
+      "costPrice": "1600000",
+      "salePrice": "2790000",
+      "discountPrice": "2290000",
+      "description": "Màn hình mang đến một loạt các công nghệ và tính năng thú vị đảm bảo bạn có trải nghiệm hiển thị đỉnh cao từ văn phòng, học tập đến giải trí với các tựa game yêu thích, đây sẽ là lựa chọn tốt đáp ứng mọi tiêu chí của bạn.",
+      "specification": {
+        "size": "24 inch",
+        "panel": "Eye Saver Mode Eco Saving Plus Chế độ chơi Game Auto Source Switch+ AMD FreeSync",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "4ms (GTG)",
+        "ports": "1 x HDMI 1.4 1 x DisplayPort 1.2"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor3.jpg",
+          "alt": "Hình 3"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "30",
+      "rating": 4.5
+    },
+    {
+      "id": "6caa",
+      "categoryId": "6",
+      "name": "Màn hình MSI PRO MP223 E2 21.45 inch FHD/VA/100Hz/1ms ",
+      "model": "MSI",
+      "costPrice": "100000",
+      "salePrice": "1890000",
+      "discountPrice": "1590000",
+      "description": "Với tần số quét cao mọi nội dung sẽ chuyển động mượt mà, cho dù bạn đang làm việc với các ứng dụng văn phòng",
+      "specification": {
+        "size": "21.45\"",
+        "panel": "Công nghệ chống nháy - Flicker-free Giảm ánh sáng xanh",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "1ms (MPRT)",
+        "ports": "1 x Headphone-out 1 x HDMI 1.4 1 x DisplayPort 1.2"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor4.jpg",
+          "alt": "Hình 4"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "51",
+      "rating": 4.5
+    },
+    {
+      "id": "eddc",
+      "categoryId": "6",
+      "name": "Màn hình Asus VA24EHF 23.8 inch FHD/IPS/100Hz/1ms/HDMI ",
+      "model": "ASUS",
+      "costPrice": "17000000",
+      "salePrice": "2790000",
+      "discountPrice": "2290000",
+      "description": "Màn hình Asus VA24EHF 23.8 inch FHD sở hữu những tiện ích đa dạng, thiết kế hiện đại, là sản phẩm đáp ứng tốt các nhu cầu sử dụng trong học tập, làm việc và giải trí.",
+      "specification": {
+        "size": "23.8 inch",
+        "panel": "Công nghệ chống nháy - Flicker-free. Chế độ chơi Game. Adaptive-Sync. Asus Splendid. QuickFit. Nhiệt độ màu (4 chế độ). Eye Care. Công nghệ Trace Free VividPixel",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "1ms (MPRT)",
+        "ports": "HDMI"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor5.jpg",
+          "alt": "Hình 5"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "44",
+      "rating": 4.5
+    },
+    {
+      "id": "81ab",
+      "categoryId": "6",
+      "name": "Công nghệ chống nháy - Flicker-free Chế độ chơi Game Adaptive-Sync Asus Splendid QuickFit Nhiệt độ màu (4 chế độ) Eye Care Công nghệ Trace Free VividPixel",
+      "model": "Samsung",
+      "costPrice": "2000000",
+      "salePrice": "3290000",
+      "discountPrice": "2790000",
+      "description": "Màn hình Samsung S3 S33GC LS27C330GAEXXV 27 inch FHD không chỉ ấn tượng với hiệu suất hiển thị mà còn sở hữu thiết kế tinh tế, sự linh hoạt và tiện ích.",
+      "specification": {
+        "size": "27\"",
+        "panel": "Eye Saver Mode Eco Saving Plus Chế độ chơi Game Auto Source Switch+",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "4ms (GTG)",
+        "ports": "1 x HDMI 1.4 1 x DisplayPort 1.2"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor6.jpg",
+          "alt": "Hình 6"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "22",
+      "rating": 4.5
+    },
+    {
+      "id": "f952",
+      "categoryId": "6",
+      "name": "Màn hình Gaming Xiaomi G27i 27 inch FHD/IPS/165Hz/1ms/FreeSync/HDMI ",
+      "model": "Xiaomi ",
+      "costPrice": "2000000",
+      "salePrice": "3990000",
+      "discountPrice": "2890000",
+      "description": "Màn hình Xiaomi Gaming G27i 27 inch FHD hội tụ đầy đủ những tính năng mà một mẫu màn hình gaming cần có.",
+      "specification": {
+        "size": "27\"",
+        "panel": "Giảm ánh sáng xanh Sai lệch màu Delta E< 2 AMD FreeSync Premium HDR10",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "165 Hz",
+        "responseTime": "1ms (GTG)",
+        "ports": "DisplayPort 1 x Jack tai nghe 3.5 mm HDMI"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor7.jpg",
+          "alt": "Hình 7"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "25",
+      "rating": 4.5
+    },
+    {
+      "id": "607d",
+      "categoryId": "6",
+      "name": "Màn hình Gaming Asus TUF VG249Q3A 23.8 inch FHD/IPS/180Hz/1ms/FreeSync/DisplayPort/HDMI ",
+      "model": "ASUS",
+      "costPrice": "2000000",
+      "salePrice": "2590000",
+      "discountPrice": "3090000",
+      "description": "Màn hình gaming Asus VG249Q3A 23.8 inch FHD là sự kết hợp hoàn hảo của chất lượng màn hình, hiệu suất ấn tượng và các tính năng tiện ích đáng kinh ngạc.",
+      "specification": {
+        "size": "23.8 inch",
+        "panel": "ASUS Extreme Low Motion Blur ASUS Dynamic Shadow Boost",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "180 Hz",
+        "responseTime": "1ms (GTG)",
+        "ports": "2 x HDMI 2.0 1 x Jack tai nghe 3.5 mm 1 x DisplayPort 1.2"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor8.jpg",
+          "alt": "Hình 8"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "20",
+      "rating": 4.5
+    },
+    {
+      "id": "50e0",
+      "categoryId": "6",
+      "name": "Màn hình MSI MP2412 23.8 inch FHD/VA/100Hz/1ms/HDMI ",
+      "model": "MSI",
+      "costPrice": "1000000",
+      "salePrice": "2290000",
+      "discountPrice": "1990000",
+      "description": "Diện mạo hiện đại cùng nhiều công nghệ màn hình tiên tiến hỗ trợ người dùng tối đa từ công việc hằng ngày đến giải trí, mẫu màn hình MSI MP2412 23.8 inch FHD là sự lựa chọn đáng cân nhắc trong phân khúc giá rẻ.",
+      "specification": {
+        "size": "23.8 inch",
+        "panel": "Eyesergo Anti-Flicker Chống chói Anti-Glare Adaptive-Sync",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100 Hz",
+        "responseTime": "1ms (MPRT)",
+        "ports": "1 x HDMI 1.4 1 x DisplayPort 1.2"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor9.jpg",
+          "alt": "Hình 9"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": 19,
+      "rating": 4.5
+    },
+    {
+      "categoryId": "6",
+      "name": "Màn hình Samsung S3 S31C LS24C310EAEXXV 24 inch FHD/IPS/75Hz/5ms/FreeSync/HDMI ",
+      "model": "SAMSUNG",
+      "costPrice": "1500000",
+      "salePrice": "2590000",
+      "discountPrice": "229000",
+      "description": "Màn hình Samsung S3 S31C LS24C310EAEXXV 24 inch FHD là một lựa chọn lý tưởng cho người dùng đang tìm kiếm một màn hình vừa đủ lớn, tính di động cao.",
+      "specification": {
+        "size": "24 inch",
+        "panel": "Eye Saver Mode Công nghệ chống nháy - Flicker-free Eco Saving Plus Chế độ chơi Game",
+        "resolution": "Full HD (1920 x 1080)",
+        "refreshRate": "100Hz",
+        "responseTime": "5ms (GTG)",
+        "ports": "1 x HDMI 1.4 1 x D-Sub (VGA)"
+      },
+      "images": [
+        {
+          "url": "/src/assets/Products/monitors/monitor10.jpg",
+          "alt": "Hình 10"
+        }
+      ],
+      "type": "Màn hình PC",
+      "features": [
+        "Bảo hành chính hãng 12 tháng",
+        "Giao hàng miễn phí"
+      ],
+      "promotions": [
+        "Giảm thêm 5% khi thanh toán online",
+        "Tặng phiếu mua hàng 500.000đ"
+      ],
+      "stock": "15",
+      "rating": 4.5,
+      "id": "cb12"
+    }
+  ],
+  "flashSales": [
+    {
+      "id": "1",
+      "productId": "b1f0"
+    },
+    {
+      "id": "2",
+      "productId": "48ab"
+    },
+    {
+      "id": "3",
+      "productId": "9fb5"
+    },
+    {
+      "id": "4",
+      "productId": "a611"
+    },
+    {
+      "id": "5",
+      "productId": "dbde"
+    },
+    {
+      "id": "6",
+      "productId": "cb12"
+    },
+    {
+      "id": "7",
+      "productId": "ce70"
+    },
+    {
+      "id": "8",
+      "productId": "e6c0"
+    },
+    {
+      "id": "9",
+      "productId": "0804"
+    },
+    {
+      "id": "10",
+      "productId": "729a"
+    }
+  ],
+  "highQuality": [
+    {
+      "id": "1",
+      "productId": "dbde"
+    },
+    {
+      "id": "2",
+      "productId": "9fb5"
+    },
+    {
+      "id": "3",
+      "productId": "b1f0"
+    },
+    {
+      "id": "4",
+      "productId": "0804"
+    },
+    {
+      "id": "5",
+      "productId": "729a"
+    },
+    {
+      "id": "6",
+      "productId": "a611"
+    },
+    {
+      "id": "7",
+      "productId": "cb12"
+    },
+    {
+      "id": "8",
+      "productId": "ce70"
+    },
+    {
+      "id": "9",
+      "productId": "48ab"
+    },
+    {
+      "id": "10",
+      "productId": "e6c0"
+    }
+  ],
+  "samsung": [
+    {
+      "id": "1",
+      "productId": "00c0"
+    },
+    {
+      "id": "2",
+      "productId": "e6c0"
+    },
+    {
+      "id": "3",
+      "productId": "729a"
+    },
+    {
+      "id": "4",
+      "productId": "b1f0"
+    },
+    {
+      "id": "5",
+      "productId": "cb12"
+    },
+    {
+      "id": "6",
+      "productId": "48ab"
+    },
+    {
+      "id": "7",
+      "productId": "0804"
+    },
+    {
+      "id": "8",
+      "productId": "a611"
+    },
+    {
+      "id": "9",
+      "productId": "9fb5"
+    },
+    {
+      "id": "10",
+      "productId": "dbde"
+    }
+  ],
+  "orders": [
+    {
+      "id": "5fa1",
+      "userId": "def0",
+      "items": [
+        {
+          "productId": "16bd",
+          "quantity": 4
+        }
+      ],
+      "totalPrice": 137960000,
+      "orderTime": "2024-11-20T12:03:50.071Z",
+      "name": "Nguyễn Văn A ",
+      "address": "Hà Nội",
+      "phone": "012312312"
+    },
+    {
+      "id": "c000",
+      "userId": "3b4a",
+      "items": [
+        {
+          "productId": "50e0",
+          "quantity": 2
+        },
+        {
+          "productId": "9fe3",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 4450000,
+      "orderTime": "2024-11-20T14:20:41.097Z",
+      "name": "Nguyễn Văn A",
+      "address": "Hà Nội",
+      "phone": "0123124124"
+    },
+    {
+      "id": "a3b8",
+      "userId": "3b4a",
+      "items": [
+        {
+          "productId": "0804",
+          "quantity": 1
+        },
+        {
+          "productId": "e08d",
+          "quantity": 2
+        }
+      ],
+      "totalPrice": 34370000,
+      "orderTime": "2024-11-20T14:26:02.839Z",
+      "name": "Nguyễn Văn A",
+      "address": "Hà Nội ",
+      "phone": "0123131241"
+    },
+    {
+      "id": "914e",
+      "userId": "259e",
+      "items": [
+        {
+          "productId": "00c0",
+          "quantity": 1
+        },
+        {
+          "productId": "a611",
+          "quantity": 1
+        }
+      ],
+      "totalPrice": 38580000,
+      "orderTime": "2024-11-30T03:56:41.367Z",
+      "name": "drgf",
+      "address": "ửg",
+      "phone": "0464786579"
+    }
+  ]
+}
