@@ -53,9 +53,9 @@ function App() {
           {/* Routes có Header */}
           <Route element={<LayoutWithHeader />}>
             <Route path={path.home} element={<Home />} />
-            <Route path={path.cart} element={<PrivateRoute element={Cart} roles={["user"]} userRole={userRole} />} />
-            <Route path={path.checkout} element={<PrivateRoute element={Checkout} roles={["user"]} userRole={userRole} />} />
-            <Route path={path.historyOrder} element={<PrivateRoute element={HistoryOrder} roles={["user"]} userRole={userRole} />} />
+            <Route path={path.cart} element={<PrivateRoute element={Cart} roles={["user", "admin"]} userRole={userRole} />} />
+            <Route path={path.checkout} element={<PrivateRoute element={Checkout} roles={["user", "admin"]} userRole={userRole} />} />
+            <Route path={path.historyOrder} element={<PrivateRoute element={HistoryOrder} roles={["user", "admin"]} userRole={userRole} />} />
 
             <Route path="/category/:categoryId/product/:productId" element={<ProductDetail />} />
             <Route path="/category/:categoryId" element={<Products />} />
