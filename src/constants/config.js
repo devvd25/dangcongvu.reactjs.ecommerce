@@ -32,3 +32,30 @@ http.interceptors.request.use(
     return Promise.reject(error);
   }
 );
+
+// Axios Response Interceptor: Tự động Retry nếu Backend đang Cold Start (502, 503, 504)
+http.interceptors.response.use(
+  (response) => response,
+  async (error) => {
+    const { config, response } = error;
+    const status = response?.status;
+
+    // Nếu gặp lỗi 502 / 503 / 504 hoặc mất kết nối tạm thời do server đang spin up
+    if ((status === 502 || status === 503 || status === 504 || !response) && config) {
+      config.__retryCount = config.__retryCount || 0;
+      const MAX_RETRIES = 3;
+
+      if (config.__retryCount < MAX_RETRIES) {
+        config.__retryCount += 1;
+        console.warn(`[API] Máy chủ đang khởi động, thử lại lần ${config.__retryCount}/${MAX_RETRIES}...`);
+        
+        // Chờ 2 giây rồi tự động gọi lại
+        await new Promise((resolve) => setTimeout(resolve, 2000));
+        return http(config);
+      }
+    }
+
+    return Promise.reject(error);
+  }
+);
+
