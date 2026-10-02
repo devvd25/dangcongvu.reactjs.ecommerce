@@ -1,6 +1,7 @@
 const path = {
     //! user
     home: '/',
+    products: '/products',
     login: '/login',
     forgotPassword: '/forgot-password',
     register: '/register',

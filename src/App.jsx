@@ -59,6 +59,7 @@ function App() {
 
             <Route path="/category/:categoryId/product/:productId" element={<ProductDetail />} />
             <Route path="/category/:categoryId" element={<Products />} />
+            <Route path={path.products} element={<Products />} />
           </Route>
 
           {/* Routes không có Header */}

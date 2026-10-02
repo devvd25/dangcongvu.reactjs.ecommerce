@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import imgFlashSales from '../../../../assets/Home/flashSales.png';
 import CardProduct from '../../../../components/CardProduct/CardProduct';
 import { userAPI } from '../../../../api/userApi';
+import path from '../../../../constants/path';
 
 function FlashSales({categoryFlashSale}) {
     const [flashSales, setFlashSales] = useState([]);
@@ -65,9 +67,11 @@ function FlashSales({categoryFlashSale}) {
                         ))}
                     </div>
                     <div className='my-5 flex justify-center'>
-                        <div className='text-[#2a83e9] text-center font-semibold cursor-pointer w-max hover:text-blue-700'>
-                            Xem tất cả sản phẩm
-                        </div>
+                        <Link to={path.products}>
+                            <div className='text-[#2a83e9] text-center font-semibold cursor-pointer w-max hover:text-blue-700 hover:underline px-6 py-2 rounded-full border border-[#2a83e9] hover:bg-blue-50 transition duration-150'>
+                                Xem tất cả sản phẩm →
+                            </div>
+                        </Link>
                     </div>
                 </div>
     );

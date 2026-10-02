@@ -23,19 +23,31 @@ function Products() {
 
     useEffect(() => {
         const fetchCategory = async () => {
+            if (!categoryId || categoryId === 'all') {
+                setCategory({ name: "Tất cả sản phẩm" });
+                return;
+            }
             try {
                 const response = await userAPI.category.getById(categoryId);
                 setCategory(response.data);
             } catch (error) {
                 console.error("Error fetching category:", error);
+                setCategory({ name: "Tất cả sản phẩm" });
             }
         };
 
         const fetchProducts = async () => {
             try {
+                setLoading(true);
                 const response = await userAPI.product.getAll();
-                const filteredProducts = response.data.filter(product => product.categoryId === categoryId);
-                setProducts(filteredProducts);
+                if (!categoryId || categoryId === 'all') {
+                    setProducts(response.data);
+                } else {
+                    const filtered = response.data.filter(
+                        product => String(product.categoryId) === String(categoryId)
+                    );
+                    setProducts(filtered);
+                }
             } catch (error) {
                 console.error("Error fetching products:", error);
                 setError("Failed to fetch products.");

@@ -28,10 +28,15 @@ function Navbar() {
   return (
     <div className="bg-[#eaecf0] w-full py-2">
       <div className="container mx-auto px-4 lg:px-20">
-        <div className="flex gap-6 justify-center">
+        <div className="flex gap-6 justify-center flex-wrap">
+          <Link to="/products">
+            <div className="text-[#0567da] text-sm cursor-pointer font-semibold hover:underline">
+              Tất cả sản phẩm
+            </div>
+          </Link>
           {categories.map((category) => (
             <Link key={category.id} to={`/category/${category.id}`}>
-              <div className="text-[#0567da] text-sm cursor-pointer">
+              <div className="text-[#0567da] text-sm cursor-pointer hover:underline">
                 {category.name}
               </div>
             </Link>
