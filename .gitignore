@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Jenkins & DevOps local files
+jenkins_home/
+backend/node_modules/
+backend/.env
+.env
+

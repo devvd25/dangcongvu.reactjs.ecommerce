@@ -18,24 +18,18 @@ RUN npm run build
 
 
 # ==========================================
-# Stage 2: Production
+# Stage 2: Production (Nginx)
 # ==========================================
-FROM node:20-alpine AS runner
+FROM nginx:alpine AS runner
 
-RUN apk add --no-cache nginx gettext
+RUN apk add --no-cache gettext
 
 WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm ci --omit=dev
-
-COPY db.json ./
 
 # Copy static assets đã build từ Stage 1
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-# Copy toàn bộ thư mục src/assets để phục vụ các ảnh được dẫn trực tiếp từ db.json và component
+# Copy toàn bộ thư mục src/assets để phục vụ các ảnh được dẫn trực tiếp từ component
 COPY src/assets /usr/share/nginx/html/src/assets
 
 COPY nginx.conf /etc/nginx/nginx.conf.template

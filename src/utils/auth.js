@@ -7,9 +7,18 @@ export const getRoleFromLS = () => {
   return localStorage.getItem("role") || "";
 };
 
+export const setTokenToLS = (token) => {
+  localStorage.setItem("token", token);
+};
+
+export const getTokenFromLS = () => {
+  return localStorage.getItem("token") || "";
+};
+
 export const clearLS = () => {
   localStorage.removeItem("role");
   localStorage.removeItem("profile");
+  localStorage.removeItem("token");
   const clearLSEvent = new Event("clearLS");
   LocalStorageEventTarget.dispatchEvent(clearLSEvent);
 };

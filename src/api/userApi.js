@@ -1,4 +1,5 @@
 import { http } from "../constants/config";
+import { setTokenToLS } from "../utils/auth";
 
 const BASE_USER_URL = "/users";
 const BASE_PRODUCT_URL = "/products";
@@ -22,50 +23,30 @@ export const userAPI = {
     })),
 
   register: async (data) => {
-    const { email, password, username, phone } = data;
-
-    const emailExists = await userAPI.checkEmailExists(email);
-    if (emailExists.exists) throw new Error("Email đã tồn tại.");
-
-    const phoneExists = await userAPI.checkPhoneExists(phone);
-    if (phoneExists.exists) throw new Error("Số điện thoại đã tồn tại.");
-
-    const userResponse = await http.post(BASE_USER_URL, {
-      email,
-      password,
-      username,
-      phone,
-      role: "user",
-    });
-    const cartResponse = await http.post(BASE_CART_URL, {
-      userId: userResponse.data.id,
-      items: [],
-    });
-
-    return { user: userResponse.data, cart: cartResponse.data };
+    try {
+      const response = await http.post("/auth/register", data);
+      if (response.data?.token) {
+        setTokenToLS(response.data.token);
+      }
+      return { user: response.data.data, cart: response.data.cart };
+    } catch (error) {
+      const msg = error.response?.data?.message || error.message || "Đăng ký thất bại.";
+      throw new Error(msg);
+    }
   },
 
   login: async (data) => {
     const { emailOrPhone, password } = data;
-
-    const userResponse = await http.get(
-      `${BASE_USER_URL}?email=${emailOrPhone}`
-    );
-    const phoneResponse = await http.get(
-      `${BASE_USER_URL}?phone=${emailOrPhone}`
-    );
-
-    const user =
-      userResponse.data.length > 0
-        ? userResponse.data[0]
-        : phoneResponse.data.length > 0
-        ? phoneResponse.data[0]
-        : null;
-
-    if (!user) throw new Error("Email hoặc số điện thoại không tồn tại.");
-    if (user.password !== password) throw new Error("Mật khẩu không đúng.");
-
-    return { data: user };
+    try {
+      const response = await http.post("/auth/login", { emailOrPhone, password });
+      if (response.data?.token) {
+        setTokenToLS(response.data.token);
+      }
+      return { data: response.data.data };
+    } catch (error) {
+      const msg = error.response?.data?.message || error.message || "Đăng nhập thất bại.";
+      throw new Error(msg);
+    }
   },
 
   getProfile: (id) => http.get(`${BASE_USER_URL}/${id}`),
@@ -74,57 +55,16 @@ export const userAPI = {
   cart: {
     get: (userId) => http.get(`${BASE_CART_URL}?userId=${userId}`),
     addProductToCart: async (userId, productId, quantity) => {
-      const response = await http.get(`${BASE_CART_URL}?userId=${userId}`);
-      const userCart =
-        response.data[0] ||
-        (await http.post(BASE_CART_URL, { userId, items: [] }));
-
-      const existingItem = userCart.items.find(
-        (item) => item.productId === productId
-      );
-      if (existingItem) {
-        existingItem.quantity += quantity;
-      } else {
-        userCart.items.push({ productId, quantity });
-      }
-      return http.put(`${BASE_CART_URL}/${userCart.id}`, userCart);
+      return http.post(`${BASE_CART_URL}/add`, { userId, productId, quantity });
     },
     updateCart: async (userId, productId, quantity) => {
-      const response = await http.get(`${BASE_CART_URL}?userId=${userId}`);
-      const userCart = response.data[0];
-
-      if (userCart) {
-        const existingItem = userCart.items.find(
-          (item) => item.productId === productId
-        );
-        if (existingItem) {
-          existingItem.quantity = quantity;
-          return http.put(`${BASE_CART_URL}/${userCart.id}`, userCart);
-        }
-      }
-      throw new Error("Product not found in cart");
+      return http.put(`${BASE_CART_URL}/update`, { userId, productId, quantity });
     },
     removeProductToCart: async (userId, productId) => {
-      const response = await http.get(`${BASE_CART_URL}?userId=${userId}`);
-      const userCart = response.data[0];
-
-      if (userCart) {
-        userCart.items = userCart.items.filter(
-          (item) => item.productId !== productId
-        );
-        return http.put(`${BASE_CART_URL}/${userCart.id}`, userCart);
-      }
-      throw new Error("Cart not found");
+      return http.delete(`${BASE_CART_URL}/remove`, { data: { userId, productId } });
     },
     resetCart: async (userId) => {
-      const response = await http.get(`${BASE_CART_URL}?userId=${userId}`);
-      const userCart = response.data[0];
-
-      if (userCart) {
-        userCart.items = []; // Làm sạch giỏ hàng
-        return http.put(`${BASE_CART_URL}/${userCart.id}`, userCart);
-      }
-      throw new Error("Cart not found");
+      return http.post(`${BASE_CART_URL}/reset`, { userId });
     },
   },
 

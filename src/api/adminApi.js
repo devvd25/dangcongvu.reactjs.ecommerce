@@ -1,4 +1,5 @@
 import { http } from "../constants/config";
+import { setTokenToLS } from "../utils/auth";
 
 // Define common endpoints
 const BASE_USER_URL = "/users";
@@ -26,7 +27,7 @@ export const adminAPI = {
 
     // Tạo người dùng mới
     createUser: async (data) => {
-      const { email, password, username, phone } = data;
+      const { email, password, username, phone, role } = data;
 
       // Kiểm tra email và số điện thoại
       const emailExists = await adminAPI.user.checkEmailExists(email);
@@ -39,53 +40,31 @@ export const adminAPI = {
         throw new Error("Số điện thoại đã tồn tại.");
       }
 
-      // Tạo người dùng mới
+      // Backend tự động mã hoá mật khẩu và tạo giỏ hàng cho user
       const userResponse = await http.post(BASE_USER_URL, {
         email,
         password,
         username,
         phone,
-        role: "user", // Mặc định vai trò là user
-      });
-
-      // Tạo giỏ hàng mới cho người dùng
-      await http.post(BASE_CART_URL, {
-        userId: userResponse.data.id,
-        items: [], // Giỏ hàng khởi tạo trống
+        role: role || "user",
       });
 
       return userResponse.data; // Trả về thông tin người dùng
     },
 
-    // Đăng nhập người dùng
+    // Đăng nhập người dùng / quản trị viên
     login: async (data) => {
       const { emailOrPhone, password } = data;
-
-      // Kiểm tra người dùng tồn tại
-      const userResponse = await http.get(
-        `${BASE_USER_URL}?email=${emailOrPhone}`
-      );
-      const phoneResponse = await http.get(
-        `${BASE_USER_URL}?phone=${emailOrPhone}`
-      );
-
-      const user =
-        userResponse.data.length > 0
-          ? userResponse.data[0]
-          : phoneResponse.data.length > 0
-          ? phoneResponse.data[0]
-          : null;
-
-      if (!user) {
-        throw new Error("Email hoặc số điện thoại không tồn tại.");
+      try {
+        const response = await http.post("/auth/login", { emailOrPhone, password });
+        if (response.data?.token) {
+          setTokenToLS(response.data.token);
+        }
+        return { data: response.data.data };
+      } catch (error) {
+        const msg = error.response?.data?.message || error.message || "Đăng nhập thất bại.";
+        throw new Error(msg);
       }
-
-      // Kiểm tra mật khẩu
-      if (user.password !== password) {
-        throw new Error("Mật khẩu không đúng.");
-      }
-
-      return { data: user }; // Trả về dữ liệu người dùng nếu đăng nhập thành công
     },
 
     // Cập nhật thông tin người dùng
@@ -202,20 +181,7 @@ export const adminAPI = {
     // Xóa sản phẩm
     deleteProduct: async (id) => {
       try {
-        // Kiểm tra xem sản phẩm có nằm trong giỏ hàng không
-        const cartsResponse = await http.get(BASE_CART_URL);
-        const carts = cartsResponse.data;
-
-        // Kiểm tra từng giỏ hàng để xem sản phẩm có trong đó không
-        const isInCart = carts.some((cart) =>
-          cart.items.some((item) => item.productId === id)
-        );
-
-        if (isInCart) {
-          throw new Error("Sản phẩm đang nằm trong giỏ hàng, không thể xóa.");
-        }
-
-        // Gửi yêu cầu xóa sản phẩm
+        // Gửi yêu cầu xóa sản phẩm (backend tự kiểm tra ràng buộc giỏ hàng)
         const response = await http.delete(`${BASE_PRODUCT_URL}/${id}`);
         return { status: response.status, data: response.data }; // Trả về status và dữ liệu phản hồi từ API
       } catch (error) {
