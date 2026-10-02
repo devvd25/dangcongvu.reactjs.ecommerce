@@ -40,7 +40,7 @@ async function seed() {
   try {
     console.log("🌱 Bắt đầu quá trình seed dữ liệu từ db.json...");
 
-    if (sequelize.getDialect() !== "sqlite") {
+    if (sequelize.getDialect() !== "sqlite" && !process.env.DATABASE_URL) {
       await ensureDatabaseExists();
     }
     await sequelize.authenticate();

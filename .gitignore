@@ -28,4 +28,5 @@ jenkins_home/
 backend/node_modules/
 backend/.env
 .env
+scratch/
 
