@@ -2,7 +2,7 @@
 set -e
 
 export PORT="${PORT:-10000}"
-export BACKEND_URL="${BACKEND_URL:-http://backend:5000/api/}"
+export BACKEND_URL="${BACKEND_URL:-https://dangcongvu-ecommerce-backend.onrender.com/api/}"
 
 echo "Starting container on PORT: $PORT..."
 echo "Backend API Proxy Target: $BACKEND_URL"
