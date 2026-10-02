@@ -19,6 +19,7 @@ import Products from "./pages/User/Products/Products";
 import Checkout from "./pages/User/Checkout/Checkout";
 import HistoryOrder from "./pages/User/HistoryOrder/HistoryOrder";
 import ManageOrders from "./pages/Admin/ManageOrders/ManageOrders";
+import AutoVersionChecker from "./components/AutoVersionChecker/AutoVersionChecker";
 
 const LayoutWithHeader = () => {
   return (
@@ -74,6 +75,7 @@ function App() {
           <Route path={path.manageOrders} element={<PrivateRoute element={ManageOrders} roles={["admin"]} userRole={userRole} />} />
 
         </Routes>
+        <AutoVersionChecker />
       </Router>
     </Provider>
   );
