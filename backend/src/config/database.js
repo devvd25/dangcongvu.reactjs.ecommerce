@@ -1,17 +1,29 @@
 const { Sequelize } = require("sequelize");
+const path = require("path");
 
-const sequelize = new Sequelize(
-  process.env.DB_NAME,
-  process.env.DB_USER,
-  process.env.DB_PASSWORD,
-  {
-    host: process.env.DB_HOST,
-    port: process.env.DB_PORT || 3306,
+const isSqlite =
+  process.env.DB_DIALECT === "sqlite" ||
+  (!process.env.DB_HOST && !process.env.DATABASE_URL);
+
+let sequelize;
+
+if (isSqlite) {
+  sequelize = new Sequelize({
+    dialect: "sqlite",
+    storage: path.join(__dirname, "../../database.sqlite"),
+    logging: process.env.NODE_ENV === "development" ? console.log : false,
+    define: {
+      timestamps: true,
+      underscored: true,
+    },
+  });
+} else if (process.env.DATABASE_URL) {
+  sequelize = new Sequelize(process.env.DATABASE_URL, {
     dialect: "mysql",
     logging: process.env.NODE_ENV === "development" ? console.log : false,
     define: {
       timestamps: true,
-      underscored: true, // Sử dụng snake_case cho tên cột (created_at thay vì createdAt)
+      underscored: true,
     },
     pool: {
       max: 10,
@@ -19,7 +31,32 @@ const sequelize = new Sequelize(
       acquire: 30000,
       idle: 10000,
     },
-  }
-);
+    dialectOptions: {
+      ssl: process.env.DB_SSL === "true" ? { rejectUnauthorized: false } : undefined,
+    },
+  });
+} else {
+  sequelize = new Sequelize(
+    process.env.DB_NAME || "ecommerce_db",
+    process.env.DB_USER || "root",
+    process.env.DB_PASSWORD || "",
+    {
+      host: process.env.DB_HOST || "localhost",
+      port: process.env.DB_PORT || 3306,
+      dialect: "mysql",
+      logging: process.env.NODE_ENV === "development" ? console.log : false,
+      define: {
+        timestamps: true,
+        underscored: true,
+      },
+      pool: {
+        max: 10,
+        min: 0,
+        acquire: 30000,
+        idle: 10000,
+      },
+    }
+  );
+}
 
 module.exports = sequelize;

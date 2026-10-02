@@ -40,16 +40,20 @@ async function seed() {
   try {
     console.log("🌱 Bắt đầu quá trình seed dữ liệu từ db.json...");
 
-    await ensureDatabaseExists();
+    if (sequelize.getDialect() !== "sqlite") {
+      await ensureDatabaseExists();
+    }
     await sequelize.authenticate();
-    console.log("✅ Kết nối MySQL thành công.");
+    console.log(`✅ Kết nối cơ sở dữ liệu (${sequelize.getDialect()}) thành công.`);
 
-    // Xóa và tạo mới toàn bộ bảng
-    await sequelize.sync({ force: true });
-    console.log("✅ Đã làm mới các bảng trong database (sync force: true).");
+    // Xóa và tạo mới toàn bộ bảng nếu cần
+    await sequelize.sync();
+    console.log("✅ Đã đồng bộ các bảng trong database.");
 
     // Đọc db.json
-    const dbJsonPath = path.resolve(__dirname, "../../../db.json");
+    const localDataPath = path.resolve(__dirname, "../data/db.json");
+    const rootDataPath = path.resolve(__dirname, "../../../db.json");
+    const dbJsonPath = fs.existsSync(localDataPath) ? localDataPath : rootDataPath;
     if (!fs.existsSync(dbJsonPath)) {
       throw new Error(`Không tìm thấy file db.json tại: ${dbJsonPath}`);
     }
@@ -283,11 +287,21 @@ async function seed() {
     console.log("   - Admin: admin@gmail.com | Password: 123456");
     console.log("   - User : user@gmail.com  | Password: 123456");
     console.log("-------------------------------------------------------");
-    process.exit(0);
+    if (require.main === module) {
+      process.exit(0);
+    }
+    return true;
   } catch (error) {
     console.error("❌ Lỗi trong quá trình seed dữ liệu:", error);
-    process.exit(1);
+    if (require.main === module) {
+      process.exit(1);
+    }
+    throw error;
   }
 }
 
-seed();
+if (require.main === module) {
+  seed();
+}
+
+module.exports = seed;

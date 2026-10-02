@@ -30,18 +30,31 @@ async function ensureDatabaseExists() {
 
 async function startServer() {
   try {
-    // 1. Kiểm tra / tạo database nếu chưa có
-    await ensureDatabaseExists();
+    const dialect = sequelize.getDialect();
+
+    // 1. Kiểm tra / tạo database nếu dùng MySQL
+    if (dialect !== "sqlite" && process.env.DB_HOST) {
+      await ensureDatabaseExists();
+    }
 
     // 2. Kiểm tra kết nối Sequelize
     await sequelize.authenticate();
-    console.log("✅ Kết nối MySQL thành công qua Sequelize.");
+    console.log(`✅ Kết nối cơ sở dữ liệu (${dialect}) thành công qua Sequelize.`);
 
     // 3. Đồng bộ models với database
     await sequelize.sync();
     console.log("✅ Các bảng dữ liệu đã được đồng bộ.");
 
-    // 4. Khởi động server
+    // 4. Tự động seed dữ liệu mẫu từ db.json nếu database đang trống
+    const { Product } = require("./models");
+    const count = await Product.count();
+    if (count === 0) {
+      console.log("🌱 Cơ sở dữ liệu đang trống. Đang tự động nạp dữ liệu mẫu ban đầu từ db.json...");
+      const seed = require("./seeders/seedFromDbJson");
+      await seed();
+    }
+
+    // 5. Khởi động server
     app.listen(PORT, () => {
       console.log(`🚀 Server Backend đang chạy tại: http://localhost:${PORT}`);
       console.log(`📌 API Health Check: http://localhost:${PORT}/api/health`);
