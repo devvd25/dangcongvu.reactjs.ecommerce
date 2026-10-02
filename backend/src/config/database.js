@@ -18,8 +18,11 @@ if (isSqlite) {
     },
   });
 } else if (process.env.DATABASE_URL) {
+  const isPostgres =
+    process.env.DATABASE_URL.startsWith("postgres://") ||
+    process.env.DATABASE_URL.startsWith("postgresql://");
   sequelize = new Sequelize(process.env.DATABASE_URL, {
-    dialect: "mysql",
+    dialect: isPostgres ? "postgres" : "mysql",
     logging: process.env.NODE_ENV === "development" ? console.log : false,
     define: {
       timestamps: true,
@@ -32,7 +35,10 @@ if (isSqlite) {
       idle: 10000,
     },
     dialectOptions: {
-      ssl: process.env.DB_SSL === "true" ? { rejectUnauthorized: false } : undefined,
+      ssl: {
+        require: true,
+        rejectUnauthorized: false,
+      },
     },
   });
 } else {
