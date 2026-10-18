@@ -112,7 +112,20 @@ pipeline {
                             '''
                         }
                     } catch (Exception e) {
-                        echo "⚠️ Bỏ qua bước Docker Compose: ${e.getMessage()}"
+                        echo "⚠️ Bỏ qua bước Docker Compose local: ${e.getMessage()}"
+                    }
+
+                    // 3. Triển khai tự động lên AWS Cloud VPS qua SSH (Theo sơ đồ thầy giáo)
+                    try {
+                        withCredentials([sshUserPrivateKey(credentialsId: 'aws-vps-ssh-key', keyFileVariable: 'SSH_KEY', usernameVariable: 'SSH_USER')]) {
+                            echo '☁️ Đang gửi lệnh qua SSH tới AWS Cloud VPS (13.212.197.81)...'
+                            sh '''
+                                ssh -o StrictHostKeyChecking=no -i "$SSH_KEY" "$SSH_USER@13.212.197.81" "cd ~/ecommerce-deploy && sudo docker compose pull && sudo docker compose up -d"
+                                echo "🎉 [AWS VPS] Website trên Cloud VPS đã được cập nhật phiên bản mới nhất!"
+                            '''
+                        }
+                    } catch (Exception e) {
+                        echo "ℹ️ Bỏ qua bước SSH Deploy AWS VPS (hoặc chưa thêm credential 'aws-vps-ssh-key'): ${e.getMessage()}"
                     }
                 }
             }
