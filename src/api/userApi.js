@@ -104,6 +104,9 @@ export const userAPI = {
         throw new Error("Failed to fetch orders");
       }
     },
+    // Huỷ đơn (status = "cancelled") hoặc xác nhận đã nhận hàng (status = "delivered")
+    updateStatus: (orderId, status, note) =>
+      http.patch(`${BASE_ORDER_URL}/${orderId}/status`, { status, note }),
   },
 
   category: {

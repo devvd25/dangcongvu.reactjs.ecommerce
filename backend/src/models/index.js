@@ -7,6 +7,7 @@ const Cart = require("./Cart");
 const CartItem = require("./CartItem");
 const Order = require("./Order");
 const OrderItem = require("./OrderItem");
+const OrderStatusHistory = require("./OrderStatusHistory");
 const FeaturedProduct = require("./FeaturedProduct");
 
 // ==========================================
@@ -41,6 +42,10 @@ Product.hasMany(CartItem, { foreignKey: "product_id", as: "cartItems", onDelete:
 Order.hasMany(OrderItem, { foreignKey: "order_id", as: "items", onDelete: "CASCADE" });
 OrderItem.belongsTo(Order, { foreignKey: "order_id", as: "order", onDelete: "CASCADE" });
 
+// Order <-> OrderStatusHistory (1:N)
+Order.hasMany(OrderStatusHistory, { foreignKey: "order_id", as: "statusHistory", onDelete: "CASCADE" });
+OrderStatusHistory.belongsTo(Order, { foreignKey: "order_id", as: "order", onDelete: "CASCADE" });
+
 // OrderItem <-> Product
 OrderItem.belongsTo(Product, { foreignKey: "product_id", as: "product" });
 Product.hasMany(OrderItem, { foreignKey: "product_id", as: "orderItems", onDelete: "CASCADE" });
@@ -59,5 +64,6 @@ module.exports = {
   CartItem,
   Order,
   OrderItem,
+  OrderStatusHistory,
   FeaturedProduct,
 };

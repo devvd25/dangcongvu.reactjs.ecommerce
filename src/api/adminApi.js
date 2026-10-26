@@ -209,5 +209,8 @@ export const adminAPI = {
         throw new Error("Failed to fetch orders");
       }
     },
+    // Chuyển trạng thái đơn: confirmed / shipping / delivered / cancelled
+    updateStatus: (orderId, status, note) =>
+      http.patch(`${BASE_ORDER_URL}/${orderId}/status`, { status, note }),
   },
 };
