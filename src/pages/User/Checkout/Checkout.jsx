@@ -48,7 +48,7 @@ function Checkout() {
     const calculateTotal = () => {
         if (!cart || !cart.items) return 0;
         return cart.items.reduce((total, item) => {
-            const product = products.find((p) => p.id === item.productId);
+            const product = products.find((p) => String(p.id) === String(item.productId));
             return total + (product ? product.discountPrice * item.quantity : 0);
         }, 0);
     };
@@ -72,7 +72,7 @@ function Checkout() {
 
         // Kiểm tra tồn kho cho từng sản phẩm trong giỏ hàng
         for (const item of cart.items) {
-            const product = products.find((p) => p.id === item.productId);
+            const product = products.find((p) => String(p.id) === String(item.productId));
             if (product && product.stock < item.quantity) {
                 Swal.fire("Lỗi!", `Không đủ hàng cho sản phẩm: ${product.name}`, "error");
                 return;
@@ -94,7 +94,7 @@ function Checkout() {
 
             // Cập nhật tồn kho sau khi đặt hàng
             await Promise.all(cart.items.map(async (item) => {
-                const product = products.find((p) => p.id === item.productId);
+                const product = products.find((p) => String(p.id) === String(item.productId));
                 if (product) {
                     const newStock = product.stock - item.quantity;
                     await userAPI.product.updateStock(product.id, newStock);
@@ -122,7 +122,7 @@ function Checkout() {
                         {/* Kiểm tra nếu giỏ hàng không trống */}
                         {cart && cart.items?.length > 0 ? (
                             cart.items.map((item) => {
-                                const product = products.find((p) => p.id === item.productId);
+                                const product = products.find((p) => String(p.id) === String(item.productId));
                                 const itemTotal = product ? product.discountPrice * item.quantity : 0;
 
                                 return (
@@ -138,7 +138,7 @@ function Checkout() {
                                                     Số lượng: <span className="text-[#344054] font-light">{item?.quantity}</span>
                                                 </div>
                                             </div>
-                                            <div className="col-span-1 text-[#dd2f2c] w-max text-xl font-semibold">{product?.discountPrice.toLocaleString()} ₫</div>
+                                            <div className="col-span-1 text-[#dd2f2c] w-max text-xl font-semibold">{Number(product?.discountPrice || 0).toLocaleString("vi-VN")} ₫</div>
                                         </div>
                                         <div className="mt-4">
                                             <div className="font-semibold flex justify-between">

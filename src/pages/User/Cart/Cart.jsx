@@ -42,7 +42,7 @@ function Cart() {
   const calculateTotal = () => {
     if (!cart || !cart.items) return 0;
     return cart.items.reduce((total, item) => {
-      const product = products.find((p) => p.id === item.productId);
+      const product = products.find((p) => String(p.id) === String(item.productId));
       const itemTotal = product ? product.discountPrice * item.quantity : 0;
       return total + itemTotal;
     }, 0);
@@ -101,7 +101,7 @@ function Cart() {
             <div className="mt-3 bg-white rounded-xl p-6 mx-28">
               {cart && cart.items?.length > 0 ? (
                 cart.items.map((item) => {
-                  const product = products.find((p) => p.id === item.productId);
+                  const product = products.find((p) => String(p.id) === String(item.productId));
                   const itemTotal = product ? product.discountPrice * item.quantity : 0;
 
                   return (
@@ -117,8 +117,8 @@ function Cart() {
                           </div>
                         </div>
                         <div className="col-span-1">
-                          <div className="text-[#dd2f2c] text-xl font-semibold w-max">{product?.discountPrice.toLocaleString()} ₫</div>
-                          <div className="text-[#a4a4a4] line-through">{product?.salePrice.toLocaleString()} ₫</div>
+                          <div className="text-[#dd2f2c] text-xl font-semibold w-max">{Number(product?.discountPrice || 0).toLocaleString("vi-VN")} ₫</div>
+                          <div className="text-[#a4a4a4] line-through">{Number(product?.salePrice || 0).toLocaleString("vi-VN")} ₫</div>
                         </div>
                       </div>
                       <div className="flex justify-end">
