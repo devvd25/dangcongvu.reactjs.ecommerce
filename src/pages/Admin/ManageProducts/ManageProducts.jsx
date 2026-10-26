@@ -9,6 +9,8 @@ import AddProduct from "./AddProduct/AddProduct";
 import EditProduct from "./EditProduct/EditProduct";
 import { formatPrice } from "../../../utils/utils";
 
+const LOW_STOCK = 5; // Ngưỡng cảnh báo sắp hết hàng (khớp với Dashboard)
+
 function ManageProducts() {
     const [searchText, setSearchText] = useState('');
     const [selectedProduct, setSelectedProduct] = useState(null);
@@ -18,6 +20,7 @@ function ManageProducts() {
     const [loading, setLoading] = useState(true);
     const [categories, setCategories] = useState([]);
     const [selectedCategory, setSelectedCategory] = useState('');
+    const [stockFilter, setStockFilter] = useState(''); // '' | 'low' | 'out'
 
     const fetchData = async () => {
         setLoading(true);
@@ -63,9 +66,11 @@ function ManageProducts() {
         return productList.filter(item =>
             (item.name.toLowerCase().includes(searchText.toLowerCase()) ||
             item.model.toLowerCase().includes(searchText.toLowerCase())) &&
-            (selectedCategory ? item.categoryId === selectedCategory : true)
+            (selectedCategory ? item.categoryId === selectedCategory : true) &&
+            (stockFilter === 'out' ? Number(item.stock) <= 0 : true) &&
+            (stockFilter === 'low' ? Number(item.stock) > 0 && Number(item.stock) <= LOW_STOCK : true)
         );
-    }, [searchText, productList, selectedCategory]);
+    }, [searchText, productList, selectedCategory, stockFilter]);
 
     const openAddModal = () => setIsAddModalOpen(true);
     const closeAddModal = () => setIsAddModalOpen(false);
@@ -140,10 +145,25 @@ function ManageProducts() {
 
         },
         {
+            name: 'Tồn Kho',
+            selector: row => Number(row.stock),
+            sortable: true,
+            width: '10%',
+            cell: row => {
+                const stock = Number(row.stock);
+                const style = stock <= 0 ? 'bg-red-100 text-red-600' : stock <= LOW_STOCK ? 'bg-amber-100 text-amber-700' : 'bg-green-100 text-green-700';
+                return (
+                    <span className={`text-xs font-semibold px-2.5 py-1 rounded-full whitespace-nowrap ${style}`}>
+                        {stock <= 0 ? 'Hết hàng' : stock}
+                    </span>
+                );
+            },
+        },
+        {
             name: 'Mô Tả',
             selector: row => row.description,
             sortable: false,
-            width: '30%',
+            width: '20%',
             cell: row => (
                 <div style={{ whiteSpace: 'normal', wordWrap: 'break-word' }}>
                     {row.description}
@@ -194,6 +214,15 @@ function ManageProducts() {
                             {categories.map(category => (
                                 <option key={category.id} value={category.id}>{category.name}</option>
                             ))}
+                        </select>
+                        <select
+                            value={stockFilter}
+                            onChange={(e) => setStockFilter(e.target.value)}
+                            className="p-2 border border-gray-500 rounded ml-2 me-auto"
+                        >
+                            <option value="">Tất cả tồn kho</option>
+                            <option value="low">Sắp hết hàng (≤ {LOW_STOCK})</option>
+                            <option value="out">Hết hàng</option>
                         </select>
                         <input
                             type="text"

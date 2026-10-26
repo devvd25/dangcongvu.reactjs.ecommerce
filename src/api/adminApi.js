@@ -195,8 +195,15 @@ export const adminAPI = {
     },
   },
   category: {
-    getAll: () => http.get(BASE_CATEGORY_URL), // Lấy tất cả danh mục
+    getAll: () => http.get(BASE_CATEGORY_URL), // Lấy tất cả danh mục (kèm productCount)
     getById: (id) => http.get(`${BASE_CATEGORY_URL}/${id}`),
+    create: (data) => http.post(BASE_CATEGORY_URL, data), // { name, slug?, image?, status? }
+    update: (id, data) => http.put(`${BASE_CATEGORY_URL}/${id}`, data),
+    delete: (id) => http.delete(`${BASE_CATEGORY_URL}/${id}`),
+  },
+  stats: {
+    // Số liệu Dashboard: doanh thu, đơn theo trạng thái, bán chạy, sắp hết hàng...
+    getDashboard: (days = 7) => http.get(`/stats/dashboard?days=${days}`),
   },
   order: {
     getAll: (userId) => http.get(`${BASE_ORDER_URL}`),

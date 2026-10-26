@@ -7,6 +7,7 @@ const categoryRoutes = require("./categoryRoutes");
 const cartRoutes = require("./cartRoutes");
 const orderRoutes = require("./orderRoutes");
 const featuredRoutes = require("./featuredRoutes");
+const statsRoutes = require("./statsRoutes");
 
 // Đăng ký tất cả routes
 router.use("/auth", authRoutes);
@@ -15,6 +16,7 @@ router.use("/products", productRoutes);
 router.use("/categories", categoryRoutes);
 router.use("/carts", cartRoutes);
 router.use("/orders", orderRoutes);
+router.use("/stats", statsRoutes);
 
 // Featured routes (mount trực tiếp, không có prefix chung)
 router.use("/", featuredRoutes);

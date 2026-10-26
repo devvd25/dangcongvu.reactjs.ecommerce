@@ -55,7 +55,7 @@ function LoginAdmin({ setUserRole }) {
                 setProfileToLS(response.data);
                 setRoleTokenToLS(response.data.role);
                 setUserRole(response.data.role); // Cập nhật vai trò người dùng trong state cha
-                navigate(path.manageUser); // Điều hướng đến trang quản lý người dùng sau khi đăng nhập thành công
+                navigate(path.dashboard); // Điều hướng đến trang Dashboard sau khi đăng nhập thành công
             });
         } catch (error) {
             // Nếu có lỗi khi đăng nhập, hiển thị thông báo lỗi

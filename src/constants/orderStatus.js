@@ -4,26 +4,31 @@ export const ORDER_STATUS = {
     label: "Chờ xác nhận",
     stepLabel: "Đơn hàng đã đặt",
     badge: "bg-yellow-100 text-yellow-700",
+    bar: "bg-yellow-400",
   },
   confirmed: {
     label: "Chờ lấy hàng",
     stepLabel: "Đã xác nhận",
     badge: "bg-blue-100 text-blue-700",
+    bar: "bg-blue-500",
   },
   shipping: {
     label: "Đang giao",
     stepLabel: "Đang giao hàng",
     badge: "bg-indigo-100 text-indigo-700",
+    bar: "bg-indigo-500",
   },
   delivered: {
     label: "Đã giao",
     stepLabel: "Giao hàng thành công",
     badge: "bg-green-100 text-green-700",
+    bar: "bg-green-500",
   },
   cancelled: {
     label: "Đã huỷ",
     stepLabel: "Đã huỷ đơn",
     badge: "bg-red-100 text-red-600",
+    bar: "bg-red-400",
   },
 };
 

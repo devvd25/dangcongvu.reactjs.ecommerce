@@ -12,6 +12,8 @@ const path = {
     historyOrder: '/history-order',
     //! admin
     loginAdmin: '/login-admin',
+    dashboard: '/dashboard',
+    manageCategories: '/manage-categories',
     manageUser: '/manage-user',
     manageProduct: '/manage-product',
     manageOrders: '/manage-orders',

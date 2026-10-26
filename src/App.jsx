@@ -19,6 +19,8 @@ import Products from "./pages/User/Products/Products";
 import Checkout from "./pages/User/Checkout/Checkout";
 import HistoryOrder from "./pages/User/HistoryOrder/HistoryOrder";
 import ManageOrders from "./pages/Admin/ManageOrders/ManageOrders";
+import Dashboard from "./pages/Admin/Dashboard/Dashboard";
+import ManageCategories from "./pages/Admin/ManageCategories/ManageCategories";
 import AutoVersionChecker from "./components/AutoVersionChecker/AutoVersionChecker";
 
 const LayoutWithHeader = () => {
@@ -73,6 +75,8 @@ function App() {
           <Route path={path.manageUser} element={<PrivateRoute element={ManageUsers} roles={["admin"]} userRole={userRole} />} />
           <Route path={path.manageProduct} element={<PrivateRoute element={ManageProducts} roles={["admin"]} userRole={userRole} />} />
           <Route path={path.manageOrders} element={<PrivateRoute element={ManageOrders} roles={["admin"]} userRole={userRole} />} />
+          <Route path={path.dashboard} element={<PrivateRoute element={Dashboard} roles={["admin"]} userRole={userRole} />} />
+          <Route path={path.manageCategories} element={<PrivateRoute element={ManageCategories} roles={["admin"]} userRole={userRole} />} />
 
         </Routes>
         <AutoVersionChecker />
