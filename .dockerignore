@@ -12,3 +12,9 @@ yarn-error.log*
 .vscode
 .idea
 .DS_Store
+
+# Khong dua key/du lieu Jenkins vao build context
+*.pem
+jenkins_home
+scratch
+*.docx
